@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../img/IMG_4378.jpeg);
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: rgb(255, 255, 255);
+}
+
+p {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Estilos para los post */
+.courses {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.course-card {
+    background-color: #5c2d7a8a;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 20px;
+    width: 29%;
+   
+    text-align: center;
+}
+
+.course-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.course-card h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color:#ffdd59;
+}
+
+.course-card p {
+    margin: 10px 0;
+    color: #fff;
+}
+
+.course-card button {
+    padding: 10px 20px;
+    background-color: #ffdd59;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-card button:hover {
+    background-color: #f0bc3b;
+}
+
+
+

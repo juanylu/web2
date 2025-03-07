@@ -1,0 +1,83 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo con imagen */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../img/IMG_4378.jpeg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+
+
+/* Contenedor principal */
+.contenedor-perfil {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.perfil-usuario h2 {
+    color: #ffdd59; 
+}
+
+.perfil-publicaciones .publicacion h3 {
+    margin: 0 0 10px;
+    color: #ffdd59; 
+}
+
+
+/* Perfil usuario */
+.perfil-usuario {
+    background: #5c2d7a8a;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.perfil-usuario img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Publicaciones */
+.perfil-publicaciones {
+    background: #5c2d7a8a;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.perfil-publicaciones .publicacion {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.perfil-publicaciones .publicacion h3 {
+    margin: 0 0 10px;
+}
+
+.perfil-publicaciones .publicacion:last-child {
+    border-bottom: none;
+}

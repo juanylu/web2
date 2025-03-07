@@ -9,6 +9,9 @@
     
 </head>
 <body>
+<?php include_once("../incluir/navbarRL.php"); ?>
+
+
     <div class="contenedor">
         <div class="formulario">
             <h2>Crear Cuenta</h2>
@@ -69,7 +72,7 @@
             return false;
         }
 
-        // Todo validado
+       
         return true;
     }
     </script>

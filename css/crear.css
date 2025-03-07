@@ -1,0 +1,69 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo con imagen */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../img/IMG_4378.jpeg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+
+/* Contenedor general */
+.contenedor-publicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Formulario */
+.formulario-publicacion {
+    background: #5c2d7a8a;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Títulos */
+.formulario-publicacion h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formulario-publicacion input[type="text"],
+.formulario-publicacion textarea,
+.formulario-publicacion select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Botoncito de enviar */
+.formulario-publicacion .btn.btn-warning {
+    background-color: #ffdd59;
+    width: 50%;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    
+}

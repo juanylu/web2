@@ -9,6 +9,10 @@
     
 </head>
 <body>
+<?php include_once("../incluir/navbarRL.php"); ?>
+
+
+
     <div class="contenedor">
         <div class="formulario">
             <h2>Iniciar Sesión</h2>

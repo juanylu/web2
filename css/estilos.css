@@ -1,0 +1,95 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo con imagen */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../img/IMG_4376.jpeg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Contenedor del formulario */
+.contenedor {
+    background: rgba(255, 255, 255, 0.75); /* Blanco con transparencia */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Desenfoque del fondo */
+}
+
+/* Título */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Campos del formulario */
+form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(240, 240, 240, 0.9);
+    font-size: 16px;
+}
+
+/* Botón */
+form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #ac47ca;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover del botón */
+form button:hover {
+    background: #ac47ca;
+    transform: translateY(-2px);
+}
+
+/* Texto de abajo */
+form p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Enlace */
+form a {
+    color: #ac47ca;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+form a:hover {
+    color: #ac47ca;
+}
+
+.mensaje {
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}

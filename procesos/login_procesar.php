@@ -39,8 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         
         header("Location: ../pages/login.php?mensaje=" . urlencode("Usuario no encontrado."));
     }
-} else {
-    header("Location: ../pages/login.php?mensaje=" . urlencode("Método no permitido."));
 }
 
 $stmt->close();

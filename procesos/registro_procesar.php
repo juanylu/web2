@@ -29,8 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         
         header("Location: ../pages/registro.php?mensaje=" . urlencode("Error al registrar: " . $stmt->error));
     }
-} else {
-    header("Location: ../pages/registro.php?mensaje=" . urlencode("Método no permitido."));
 }
 
 $stmt->close();

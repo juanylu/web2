@@ -2,10 +2,7 @@
 session_start();
 include_once("../incluir/conexion.php");
 
-// Crear una instancia de la clase Conexion
 $conexion = new Conexion();
-
-// Usar la propiedad $conn de la clase Conexion para la conexión
 $conn = $conexion->conn;
 
 
@@ -24,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $usuario = $resultado->fetch_assoc();
 
         if (password_verify($password, $usuario["password"])) {
-            // Guardar datos en sesión
+          
             $_SESSION["usuario"] = [
                 "id" => $usuario["id"],
                 "nombre" => $usuario["nombre"],
@@ -32,21 +29,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 "tipo_usuario" => $usuario["tipo_usuario"]
             ];
 
-            // Redirigir con mensaje de bienvenida
+           
             header("Location: ../pages/inicio.php?mensaje=" . urlencode("Bienvenido, " . $usuario["nombre"]));
         } else {
-            // Redirigir con error en contraseña
+            
             header("Location: ../pages/login.php?mensaje=" . urlencode("Contraseña incorrecta."));
         }
     } else {
-        // Redirigir con error de usuario no encontrado
+        
         header("Location: ../pages/login.php?mensaje=" . urlencode("Usuario no encontrado."));
     }
 } else {
     header("Location: ../pages/login.php?mensaje=" . urlencode("Método no permitido."));
 }
 
-// Cerrar la declaración y la conexión
 $stmt->close();
 $conexion->cerrar();
 

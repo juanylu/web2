@@ -44,28 +44,24 @@
         </div>
     </div>
 
-    <!-- Validaciones Frontend -->
     <script>
     function validarFormulario() {
         const email = document.querySelector('input[name="email"]').value;
         const password = document.querySelector('input[name="password"]').value;
         const fechaNacimiento = document.querySelector('input[name="fecha_nacimiento"]').value;
-        
-        // Validación del email
+
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             alert("Por favor, ingresa un correo electrónico válido.");
             return false;
         }
 
-        // Validación de la contraseña
         const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
         if (!passwordRegex.test(password)) {
             alert("La contraseña debe tener al menos 6 caracteres, incluyendo 1 número, 1 mayúscula y 1 minúscula.");
             return false;
         }
 
-        // Validación de fecha de nacimiento (no puede ser posterior a hoy)
         const fechaHoy = new Date().toISOString().split("T")[0];
         if (fechaNacimiento > fechaHoy) {
             alert("La fecha de nacimiento no puede ser posterior a hoy.");

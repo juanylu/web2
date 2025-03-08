@@ -11,7 +11,6 @@
 
     <div class="chat-contenedor">
 
-        <!-- Lista de contactos -->
         <div class="chat-contactos">
             <h2>Habla con usuarios</h2>
             <ul>
@@ -22,7 +21,6 @@
             </ul>
         </div>
 
-        <!-- Área de chat -->
         <div class="chat-mensajes">
             <div class="mensajes">
                 <div class="mensaje recibido">¡Hola! ¿Cómo estás?</div>
@@ -31,7 +29,6 @@
                 <div class="mensaje enviado">Bueno. Oye vi tu publicacion mas reciente y coincido</div>
             </div>
 
-            <!-- Input para escribir -->
             <form class="chat-input">
                 <input type="text" placeholder="Escribe tu mensaje...">
                 <button type="submit">Enviar</button>

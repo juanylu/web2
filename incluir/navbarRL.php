@@ -36,9 +36,8 @@
         color: #ffdd59;
     }
 
-    /* Ajuste para que el contenido no quede oculto detrás del navbar */
     body {
-        padding-top: 70px; /* Altura del navbar */
+        padding-top: 70px; 
     }
 </style>
 

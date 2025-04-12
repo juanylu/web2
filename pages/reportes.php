@@ -1,5 +1,4 @@
 <?php
-// En el futuro aquí conectamos para traer los datos de la BD.
 ?>
 <!DOCTYPE html>
 <html lang="es">

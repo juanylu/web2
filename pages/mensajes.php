@@ -1,5 +1,5 @@
 <?php
-// Luego aquí podrías traer los datos reales del usuario y sus mensajes
+
 ?>
 <!DOCTYPE html>
 <html lang="es">

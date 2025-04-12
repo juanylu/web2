@@ -9,7 +9,6 @@
         <a href="../pages/login.php">Cerrar sesión</a>
     </nav>
 </header>
-
 <style>
     .navbar {
         width: 100%;

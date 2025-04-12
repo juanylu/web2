@@ -21,7 +21,7 @@ if(isset($_POST['obtenerUsuarios'])) {
         array_push($arrUsuarios, $obj);
     }
 
-    // convierte en json
+    
     $jsonUsuarios = json_encode($arrUsuarios);
     echo $jsonUsuarios;
 }

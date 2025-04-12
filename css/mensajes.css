@@ -1,0 +1,160 @@
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('../img/Fondo\ estrellas.jpeg');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    color: #fff;
+}
+
+/* Contenedor general */
+.contenedor-mensajes {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #ffdd59;
+}
+
+/* Chat */
+.chat {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor mensaje */
+.mensaje-contenedor {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.mensaje-contenedor.receptor {
+    flex-direction: row;
+}
+
+.mensaje-contenedor.emisor {
+    flex-direction: row-reverse;
+}
+
+.foto-usuario {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffdd59;
+}
+
+/* Mensaje */
+.mensaje {
+    max-width: 80%;
+    padding: 12px 18px;
+    border-radius: 20px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.mensaje p {
+    margin: 0;
+}
+
+.mensaje .hora {
+    display: block;
+    font-size: 12px;
+    color: #ddd;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.nombre-usuario {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+/* Estilos especiales para emisor y receptor */
+.mensaje-contenedor.emisor .mensaje {
+    background: #ffdd59;
+    color: #ffffff;
+    border-bottom-right-radius: 5px;
+}
+
+.mensaje-contenedor.receptor .mensaje {
+    background: rgba(255, 255, 255, 0.3);
+    border-bottom-left-radius: 5px;
+}
+
+/* Formulario de envío */
+.formulario-mensaje {
+    display: flex;
+    gap: 10px;
+}
+
+.formulario-mensaje input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.formulario-mensaje button {
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    background: #ffdd59;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.formulario-mensaje button:hover {
+    background: #f9ca24;
+}

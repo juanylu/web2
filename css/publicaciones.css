@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background: url('../img/Fondo\ estrellas.jpeg');
+    background: url('../img/FONDITO.jpeg');
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -90,61 +90,110 @@ body {
     background: #f9ca24;
 }
 
+
 /* Publicaciones */
 .publicaciones {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 3 columnas responsivas */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 25px;
 }
+
 
 .publicacion {
     background: rgba(255, 255, 255, 0.15);
     padding: 20px;
     border-radius: 20px;
-    backdrop-filter: blur(12px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    color: #fff;
     display: flex;
     flex-direction: column;
-    height: 100%; /* que ocupe todo el alto disponible */
+    height: 90%;
 }
 
 
-.usuario-publicacion {
+.publicacion .usuario {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.usuario-publicacion img {
+.publicacion .usuario img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+    margin-right: 12px;
     border: 2px solid #ffdd59;
 }
 
-.usuario-publicacion h4 {
-    margin: 0;
-    font-size: 18px;
+.publicacion .usuario span {
     font-weight: bold;
-}
-
-.usuario-publicacion .fecha {
-    margin-left: auto;
-    font-size: 13px;
-    color: #ddd;
+    font-size: 18px;
 }
 
 .publicacion p {
-    margin: 10px 0;
+    margin: 15px 0;
     font-size: 16px;
+    line-height: 1.6;
 }
 
-.imagen-publicacion {
+.publicacion img {
     width: 100%;
-    height: 200px; /* tamaño más consistente */
+    height: 200px;
     border-radius: 15px;
+    margin-top: 10px;
     object-fit: cover;
+}
+
+
+.publicacion .fecha {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #dcdcdc;
+    text-align: right;
+}
+
+
+
+
+
+.reacciones {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 15px;
+    align-items: center;
+    
+    
+}
+
+.reacciones .icono {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.2s;
+}
+
+.reacciones .icono:hover {
+    transform: scale(1.2);
+}
+
+.comentar-btn {
+    margin-left: auto;
+    background-color: #ffdd59;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #333;
+}
+
+.comentar-btn:hover {
+    background-color: #f9ca24;
 }
 

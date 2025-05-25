@@ -1,5 +1,16 @@
 <?php
+session_start();
+error_reporting(0);
+ini_set('display_errors', 0);
+header('Access-Control-Allow-Origin: *');
+
+require_once __DIR__ . '/../middleware/AdminOnly.php';
+require_once __DIR__ . '/../middleware/Middleware.php';
+use Middleware\Middleware;
+Middleware::resolve('admin');
+
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,24 +26,42 @@
          include_once "../includes/navbar.php";
          ?>
 
-        <section class="consultas">
-            <h2>Consultar información</h2>
-            <form class="form-consulta">
-                <input type="text" placeholder="Buscar usuario por nombre..." required>
-                <button type="submit">Buscar</button>
-            </form>
-        </section>
+            <section class="consultas">
+                <h2>Consultar información</h2>
+
+                
+                <form class="form-consulta" id="formBuscarUsuario">
+                    <input type="text" id="nombreUsuario" placeholder="Buscar usuario por nombre..." required>
+                    <button type="submit">Buscar</button>
+                </form>
+
+                
+                <p id="contador_usuario_publicaciones"></p>
+            </section>
+
+                
+                <script>
+                    document.getElementById('formBuscarUsuario').addEventListener('submit', function(e) {
+                        e.preventDefault(); // Evita recargar la página
+                        contarPublicacionesPorNombre();
+                    });
+                </script>
+
+        
 
         <section class="resumen">
             <h2>Resumen general</h2>
             <div class="tarjetas">
                 <div class="tarjeta">
                     <h3>Total de Usuarios</h3>
-                    <p>120</p>
+                    <p id="contador_usuarios"> </p>
+                    <button onclick="contarUsuarios()">Contar Usuarios</button>
                 </div>
                 <div class="tarjeta">
                     <h3>Total de Publicaciones</h3>
-                    <p>345</p>
+                    <p id="contador_publicaciones"></p>
+                    <button onclick="contarPublicaciones()">Contar Publicaciones</button>
+                    
                 </div>
                 
                 </div>
@@ -40,4 +69,5 @@
         </section>
     </div>
 </body>
+<script src="reportes.js"></script>
 </html>

@@ -1,0 +1,125 @@
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    background: url('../img/FONDITO.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Publicación */
+.publicacion {
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 20px;
+}
+
+.publicacion h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #ffdd59;
+}
+
+.publicacion p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.publicacion img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+/* Comentarios */
+#lista-comentarios {
+    margin-top: 20px;
+}
+
+.comentario {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.comentario strong {
+    color: #ffdd59;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.comentario p {
+    margin: 0;
+    color: #fff;
+}
+
+.comentario small {
+    color: #dcdcdc;
+    font-size: 12px;
+}
+
+/* Formulario de nuevo comentario */
+#form-comentario {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#form-comentario textarea {
+    resize: vertical;
+    min-height: 80px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#form-comentario textarea::placeholder {
+    color: #e0e0e0;
+}
+
+#form-comentario textarea:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#form-comentario button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #ffdd59;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-comentario button:hover {
+    background-color: #f9ca24;
+}

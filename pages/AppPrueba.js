@@ -6,7 +6,7 @@ alert('Este es el Id del usuario Actual ' + idUsuario);
 
 function obtenerUsuarios() {
     let request = new XMLHttpRequest();
-    request.open('POST', '/ponclick/Controller/usuarios_controller.php');
+    request.open('POST', '/postclick/Controller/usuarios_controller.php');
 
     let formData = new FormData();
     formData.append('obtenerUsuarios', '');
@@ -44,7 +44,7 @@ function insertarUsuario() {
 
     // instanciamos un objeto de la clase que nos ayuda a usar AJAX para las peticiones
     let request = new XMLHttpRequest();
-    request.open('POST', '/ponclick/Controller/usuarios_controller.php');
+    request.open('POST', '/postclick/Controller/usuarios_controller.php');
 
     // instanciar el form data pára transportar los datos
     let formData = new FormData();
@@ -75,7 +75,7 @@ function insertarUsuario() {
 
 function editarUsuario() {
     let request = new XMLHttpRequest();
-    request.open('POST', '/ponclick/Controller/usuarios_controller.php');
+    request.open('POST', '/postclick/Controller/usuarios_controller.php');
 
     let formData = new FormData();
     formData.append('modificarUsuario', '');
@@ -104,7 +104,7 @@ function editarUsuario() {
 
 function eliminarUsuario() {
     let request = new XMLHttpRequest();
-    request.open('POST', '/ponclick/Controller/usuarios_controller.php');
+    request.open('POST', '/postclick/Controller/usuarios_controller.php');
 
     let formData = new FormData();
     formData.append('eliminarUsuario', '');
@@ -125,7 +125,7 @@ function eliminarUsuario() {
 
 function buscarUsuario() {
     let request = new XMLHttpRequest();
-    request.open('POST', '/ponclick/Controller/usuarios_controller.php');
+    request.open('POST', '/postclick/Controller/usuarios_controller.php');
 
     let formData = new FormData();
     formData.append('obtenerUsuarioPorId', '');

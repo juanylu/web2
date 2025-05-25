@@ -1,14 +1,17 @@
 <header class="navbar">
-    <h1>PonClick!</h1>
+    <h1>PostClick</h1>
     <nav>
         <a href="../pages/inicio.php">Inicio</a>
         <a href="../pages/publicaciones.php">Publi</a>
-        <a href="#">Categorias</a>
+        <a href="../pages/crear_categoria.php">Categorias</a>
         <a href="../pages/perfil.php">Perfil</a>
-        <a href="../pages/mensajes.php">Chat</a>
-        <a href="../pages/login.php">Cerrar sesión</a>
+        <a href="../pages/chat2usuarios.php">Chat</a>
+        <a href="../pages/mensajes.php">PrivChat</a>
+        <a href="../pages/reportes.php">Admin</a>
+        <a href="../pages/logout.php">Cerrar sesión</a>
     </nav>
 </header>
+
 <style>
     .navbar {
         width: 100%;

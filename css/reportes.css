@@ -3,8 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background: url('../img/Fondo\ estrellas.jpeg');
-    background-size: cover;
+    background: url('../img/FONDITO.jpeg');
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -132,4 +131,28 @@ body {
     margin: 10px 0 0;
     font-size: 22px;
     font-weight: bold;
+}
+
+#contador_usuario_publicaciones {
+    margin: 15px auto 0;         
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;          
+    display: block;              
+    width: 100%;                 
+}
+
+.tarjeta button {
+    padding: 12px 20px;
+    border-radius: 15px;
+    border: none;
+    background: #ffdd59;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.tarjeta button:hover {
+    background: #f9ca24;
 }

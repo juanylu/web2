@@ -1,13 +1,13 @@
 /* Fondo general */
 body {
     margin: 0;
-    padding: 30px;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
-    background: url('../img/Fondo\ estrellas.jpeg');
+   background: url('../img/FONDITO.jpeg');
     background-size: cover;
     min-height: 100vh;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     padding: 30px;
     color: #fff;
@@ -57,8 +57,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(12px);
-    text-align: left; /* Alinea texto a la izquierda */
-    max-width: 450px; /* Reduce el ancho del formulario */
+    text-align: center;
 }
 
 .foto-perfil img {
@@ -90,10 +89,9 @@ body {
 .perfil form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 15px;
-    align-items: flex-start; /* Alinea los inputs a la izquierda */
 }
-
 
 /* Inputs del formulario */
 .perfil input[type="text"],

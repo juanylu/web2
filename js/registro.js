@@ -33,7 +33,7 @@ function validarFormulario() {
 
 function insertarUsuario() {
     let request = new XMLHttpRequest();
-    request.open('POST', '/ponclick/Controller/usuarios_controller.php');
+    request.open('POST', '/postclick/Controller/usuarios_controller.php');
 
     let formData = new FormData();
     formData.append('insertarUsuarios', '');
@@ -55,7 +55,7 @@ function insertarUsuario() {
             document.getElementById('inputFechaNacimiento').value = '';
             document.getElementById('inputFotoPerfil').value = '';
 
-            window.location.href = "/ponclick/pages/login.php";
+            window.location.href = "/postclick/pages/login.php";
         }
     }
 }

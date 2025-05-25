@@ -1,29 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const idUsuario = localStorage.getItem('IdUsuario');
-
-    const formData = new FormData();
-    formData.append('obtenerUsuarioPorId', '');
-    formData.append('id', idUsuario);
-
-    fetch('/ponclick/Controller/usuarios_controller.php', {
-        method: 'POST',
-        body: formData
-    })
-        .then(res => res.json())
-        .then(data => {
-            if (data.length > 0) {
-                const usuario = data[0];
-                document.getElementById('nombre').value = usuario.Nombre;
-                document.getElementById('email').value = usuario.Email;
-                document.getElementById('fecha_nacimiento').value = usuario.FechaNacimiento;
-
-                if (usuario.FotoPerfil) {
-                    document.getElementById('fotoPreview').src = 'data:image/jpeg;base64,' + usuario.FotoPerfil;
-                }
-            }
-        });
-});
-
 function mostrarVistaPrevia(event) {
     const reader = new FileReader();
     reader.onload = function () {
@@ -34,8 +8,7 @@ function mostrarVistaPrevia(event) {
 }
 
 function actualizarPerfil() {
-    const idUsuario = localStorage.getItem('IdUsuario');
-
+    const id = document.getElementById('id').value; // Esto viene de un campo oculto en perfil.php
     const nombre = document.getElementById('nombre').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
@@ -49,46 +22,40 @@ function actualizarPerfil() {
             alert("La contraseña debe tener al menos 6 caracteres.");
             return;
         }
-
         if (!/[a-z]/.test(password)) {
-            alert("La contraseña debe contener al menos una letra minúscula.");
+            alert("Debe contener una letra minúscula.");
             return;
         }
-
         if (!/[A-Z]/.test(password)) {
-            alert("La contraseña debe contener al menos una letra mayúscula.");
+            alert("Debe contener una letra mayúscula.");
             return;
         }
-
         if (!/\d/.test(password)) {
-            alert("La contraseña debe contener al menos un número.");
+            alert("Debe contener un número.");
             return;
         }
-
         if (!/[^A-Za-z0-9]/.test(password)) {
-            alert("La contraseña debe contener al menos un carácter especial (como !@#$%).");
+            alert("Debe contener un carácter especial (!@#$...).");
             return;
         }
     }
 
     const formData = new FormData();
     formData.append('modificarUsuario', '');
-    formData.append('id', idUsuario);
+    formData.append('id', id);
     formData.append('nombre', nombre);
     formData.append('email', email);
     formData.append('fecha_nacimiento', fechaNacimiento);
 
-    // Solo enviar la contraseña si fue modificada
     if (password !== "") {
         formData.append('password', password);
     }
 
-    // Solo enviar la foto si fue seleccionada una nueva
     if (fotoPerfil) {
         formData.append('foto_perfil', fotoPerfil);
     }
 
-    fetch('/ponclick/Controller/usuarios_controller.php', {
+    fetch('/postclick/Controller/usuarios_controller.php', {
         method: 'POST',
         body: formData
     })
@@ -96,6 +63,8 @@ function actualizarPerfil() {
         .then(res => {
             console.log("Respuesta del backend:", res);
             alert("Perfil actualizado con éxito.");
+            // Opcional: recargar la página para ver los cambios
+            location.reload();
         })
         .catch(err => {
             console.error("Error:", err);
